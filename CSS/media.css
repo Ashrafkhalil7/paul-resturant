@@ -1,0 +1,258 @@
+/************ 0- Media .Container ************/
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/************ 1- Media #Navbar ************/
+.navbar_bg_remove {
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar .container .logo {
+    z-index: 9999999999999999999999;
+}
+
+@media screen and (max-width:1200px) {
+    .navbar .container .mode .fa-bars {
+        display: inline;
+    }
+
+    .navbar .container ul {
+        display: none;
+        padding-top: 50px;
+    }
+
+    .navbar .container ul li a::before {
+        display: none;
+    }
+
+    .navbar .container ul.open-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to left, var(--color-w-D) 0 55%, var(--blurMenu) 55% 100%);
+        text-align: center;
+    }
+
+    .navbar .container ul li:not(.fa-bars) {
+        margin-bottom: 30px;
+        padding-left: 0;
+        transform: translate(20%, 100%);
+    }
+
+    .navbar .container ul .fa-xmark {
+        display: block;
+        font-size: 24px;
+        color: var(--colorTertiary);
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .navbar .container .mode .fa-bars {
+        display: inline;
+    }
+
+    .navbar .container ul {
+        display: none;
+    }
+}
+
+/************ 2- Media #Home ************/
+@media screen and (max-width:991px) {
+    #home .container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .home-image img {
+        width: 80%;
+    }
+
+    #home .container>* {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:415px) {
+    #home .btn-group {
+        justify-content: center;
+        gap: 1.6rem;
+    }
+}
+
+/************ 3- Media #Chefs ************/
+@media screen and (max-width:992px) {
+    .chefs-cards {
+        flex-wrap: wrap;
+    }
+
+    .chefs-cards .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .chefs-cards .card {
+        width: 100%;
+    }
+
+    .chefs-cards .card .card-image::before {
+        bottom: -10px;
+    }
+}
+
+/************ 4- Media #Gallery ************/
+@media screen and (max-width: 992px) {
+    .gallery-photos {
+        grid-auto-columns: 1fr;
+        grid-auto-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(12, auto);
+        gap: 20px 20px;
+        grid-template-areas:
+            "pizza pizza steak steak"
+            "pizza pizza steak steak"
+            "burger burger steak steak"
+            "burger burger steak steak"
+            "slice-pizza slice-pizza steak steak"
+            "slice-pizza slice-pizza fried fried"
+            "slice-pizza slice-pizza fried fried"
+            "slice-pizza slice-pizza kofta kofta"
+            "slice-pizza slice-pizza kofta kofta"
+            "omelette omelette kofta kofta"
+            "omelette omelette . ."
+            "omelette omelette . .";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-photos {
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(22, auto);
+        gap: 20px 20px;
+        grid-template-areas:
+            "pizza"
+            "pizza"
+            "burger"
+            "burger"
+            "slice-pizza"
+            "slice-pizza"
+            "slice-pizza"
+            "slice-pizza"
+            "slice-pizza"
+            "omelette"
+            "omelette"
+            "omelette"
+            "steak"
+            "steak"
+            "steak"
+            "steak"
+            "steak"
+            "fried"
+            "fried"
+            "kofta"
+            "kofta"
+            "kofta"
+        ;
+    }
+}
+
+/************ 5- Media #Contact ************/
+@media screen and (max-width:992px) {
+    .row>* {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #Contact .details {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .details>* {
+        width: 100%;
+    }
+}
+
+/************ 6- Media #Footer ************/
+@media screen and (max-width:1200px) {
+    #footer .container {
+        flex-wrap: wrap;
+    }
+
+    #footer .container .about,
+    #footer .container .contact-details {
+        width: calc(50% - 20px)
+    }
+
+    .subscription {
+        order: 3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #footer .container .about {
+        order: 1;
+    }
+
+    .subscription {
+        order: 2;
+    }
+
+    #footer .container .contact-details {
+        order: 3;
+    }
+
+    #footer .container .about,
+    #footer .container .contact-details,
+    .subscription {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .subscription-group {
+        margin-bottom: 10px;
+    }
+
+    .subscription-group>* {
+        width: 100%;
+    }
+
+    .subscription-group button {
+        margin-left: 0;
+    }
+}
